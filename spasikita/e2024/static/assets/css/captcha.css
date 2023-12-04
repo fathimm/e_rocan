@@ -1,0 +1,19 @@
+#id_captcha_1 {
+    display: block;
+    width: 100%;
+    padding: 0.47rem 0.75rem;
+    font-size: .925rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #545965;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e2e5e8;
+    appearance: none;
+    border-radius: 0.75rem;
+}
+
+.captcha {
+ width: 30%;
+ margin-bottom: 1rem!important;
+}

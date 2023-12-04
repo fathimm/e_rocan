@@ -1,0 +1,121 @@
+{% with request.resolver_match.url_name as url_name %}
+<!-- Left Menu Start -->
+<ul class="metismenu list-unstyled" id="side-menu">
+    <li class="menu-title" data-key="t-t_simproka">Simproka</li>
+    
+    <li>
+        <a href="{{ initurl }}/simproka/" class="text-primary">
+            <i class="bx bxs-book icon nav-icon"></i>
+            <span class="menu-item" data-key="t-simproka">Simproka</span>
+        </a>
+    </li>
+
+    <div class="dropdown-divider"></div>
+    <li class="menu-title" data-key="t-t_managemen">Managemen</li>
+
+    <li>
+        <a href="{{ initurl }}/managemen/" class="text-danger">
+            <i class="bx bx-customize icon nav-icon"></i>
+            <span class="menu-item" data-key="t-managemen">Managemen</span>
+        </a>
+    </li>
+
+    <div class="dropdown-divider"></div>
+    <li class="menu-title" data-key="t-t_ekinerja">e-Kinerja</li>
+
+    <li>
+        <a href="{{ initurl }}/ekinerja/">
+            <i class="bx bx-card icon nav-icon"></i>
+            <span class="menu-item" data-key="t-beranda">Beranda</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-calendar-event nav-icon"></i>
+            <span class="menu-item" data-key="t-rencanakinerjatahunan">Rencana Kinerja</span>
+            <!-- <span class="badge rounded-pill bg-primary">2</span> -->
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-rktpenyusunan">Penyusunan RKT</a></li>
+            <li><a href="javascript:void(0);" data-key="t-rktkirimunduh">Kirim/Unduh RKT</a></li>
+            <li><a href="javascript:void(0);" data-key="t-rktprogress">Progress RKT</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-edit icon nav-icon"></i>
+            <span class="menu-item" data-key="t-perjanjiankinerja">Perjanjian Kinerja</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-penyusunanpk">Penyusunan PK</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-pkawal">PK Awal</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-pkrevisi">PK Revisi</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-pkakhir">PK Akhir</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="javascript:void(0);" data-key="t-rktprogress">Progress PK</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-notepad nav-icon"></i>
+            <span class="menu-item" data-key="t-rencanakinerjatahunan">Rencana Aksi</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-penyusunanrenaksi">Penyusunan</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-renaksi">Renaksi</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-renaksirevisi">Renaksi Revisi</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" data-key="t-renaksidokumen">Dokumen Renaksi</a></li>
+            <li><a href="javascript:void(0);" data-key="t-renaksiprogress">Progress Renaksi</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-bar-chart-alt nav-icon"></i>
+            <span class="menu-item" data-key="t-pengukurankinerja">Pengukuran Kinerja</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-pengukuranikk">Capaian IKK</a></li>
+            <li><a href="javascript:void(0);" data-key="t-pengukuranikp">Capaian IKP</a></li>
+            <li><a href="javascript:void(0);" data-key="t-pengukuranikss">Capaian IKSS</a></li>
+            <li><a href="javascript:void(0);" data-key="t-pengukurandokumen">Reviu Pengukuran</a></li>
+            <li><a href="javascript:void(0);" data-key="t-pengukuranprogress">Progress Laporan</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-select-multiple nav-icon"></i>
+            <span class="menu-item" data-key="t-evaluasi">Evaluasi</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-evaluasilkeupt">LKE UPT</a></li>
+            <li><a href="javascript:void(0);" data-key="t-evaluasilheupt">LHE UPT</a></li>
+            <li><a href="javascript:void(0);" data-key="t-evaluasiprogress">Progress Evaluasi</a></li>
+            <li><a href="javascript:void(0);" data-key="t-evaluasilheupt">Tindaklanjut LHE</a></li>
+            <li><a href="javascript:void(0);" data-key="t-evaluasilheupt">Progress Tinjut LHE</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-file nav-icon"></i>
+            <span class="menu-item" data-key="t-laporankinerja">Laporan Kinerja</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-lakinpenyusunan">Penyusunan Lakin </a></li>
+            <li><a href="javascript:void(0);" data-key="t-lakinprogress">Progress Lakin</a></li>
+        </ul>
+    </li>
+    
+</ul>
+{% endwith %}

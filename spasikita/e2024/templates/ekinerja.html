@@ -1,0 +1,380 @@
+{% load static %}
+{% with request.resolver_match.url_name as url_name %}
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>SPASIKITA - KEMENDIKBUDRISTEK</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Biro Perencanaan, Setjen - Kemendikbudritek" name="description" />
+        <meta content="Roren" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'assets/images/favicon_dikbud.png' %}">
+
+        <!-- plugin css -->
+        <link href="{% static 'assets/libs/jsvectormap/css/jsvectormap.min.css' %}" rel="stylesheet" type="text/css"/>
+
+        <!-- datepicker css -->
+        <link rel="stylesheet" href="{% static 'assets/libs/flatpickr/flatpickr.min.css' %}">
+
+        <!-- Bootstrap Css -->
+        <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" id="bootstrap-style"/>
+        <!-- Icons Css -->
+        <link href="{% static 'assets/css/icons.min.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- App Css-->
+        <link href="{% static 'assets/css/app.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/css/app.min.css' %}" rel="stylesheet" type="text/css" id="app-style"/>
+
+        <link href="{% static 'assets/css/select2.css' %}" rel="stylesheet" type="text/css"/>
+
+        <!-- Froala -->
+        <link rel="stylesheet" href="{% static 'froala/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/froala_editor.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/froala_style.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/plugins/code_view.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/plugins/colors.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/plugins/emoticons.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/plugins/image_manager.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/plugins/image.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/plugins/line_breaker.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/plugins/table.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/plugins/char_counter.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/plugins/video.css' %}">
+        <link rel="stylesheet" href="{% static 'froala/css/codemirror.min.css' %}">
+        <!-- Froala -->
+
+    </head>
+
+    
+    <body data-sidebar-size="lg" class="sidebar-enable">
+
+    <!-- <body data-layout="horizontal"> -->
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            
+            <header id="page-topbar" class="isvertical-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="javascript:void(0);" class="logo logo-dark">
+                                <span class="logo-lg">
+                                    <img src="{% static 'assets/images/logo-dark.png' %}" alt="" height="35">
+                                </span>
+                                <span class="logo-sm">
+                                    <img src="{% static 'assets/images/logo-dark-sm.png' %}" alt="" height="28">
+                                </span>
+                            </a>
+
+                            <a href="javascript:void(0);" class="logo logo-light">
+                                <span class="logo-lg">
+                                    <img src="{% static 'assets/images/logo-light.png' %}" alt="" height="35">
+                                </span>
+                                <span class="logo-sm">
+                                    <img src="{% static 'assets/images/logo-light-sm.png' %}" alt="" height="28">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">
+                            <i class="bx bx-menu align-middle"></i>
+                        </button>
+
+                        <!-- start page title -->
+                        <div class="page-title-box align-self-center d-none d-md-block">
+                            <h4 class="page-title mb-0">SPASIKITA | <a class="text-muted">eKINERJA</a></h4>
+                        </div>
+                        <!-- end page title -->
+
+                    </div>
+
+                    <div class="d-flex">
+          
+                        <!-- ============================================================== -->
+                        <!-- flag -->
+                        <!-- ============================================================== -->
+
+                        <!-- ============================================================== -->
+                        <!-- search -->
+                        <!-- ============================================================== -->
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon" id="page-header-notifications-dropdown-v"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-bell icon-sm align-middle"></i>
+                                <span class="noti-dot bg-danger rounded-pill">4</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-xl dropdown-menu-end p-0"
+                                aria-labelledby="page-header-notifications-dropdown-v">
+                                <div class="p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h5 class="m-0 font-size-15"> Pesan </h5>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#!" class="small fw-semibold text-decoration-underline"> Tandai Semua Sudah Dibaca </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-simplebar style="max-height: 250px;">
+                                    <a href="#!" class="text-reset notification-item">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0 me-3">
+                                                <img src="{% static 'assets/images/users/avatar-3.jpg' %}" class="rounded-circle avatar-sm" alt="user-pic">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="text-muted font-size-13 mb-0 float-end">1 hour ago</p>
+                                                <h6 class="mb-1">James Lemire</h6>
+                                                <div>
+                                                    <p class="mb-0">It will seem like simplified English.</p>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </a>
+                                    <a href="#!" class="text-reset notification-item">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0 avatar-sm me-3">
+                                                <span class="avatar-title bg-primary rounded-circle font-size-18">
+                                                    <i class="bx bx-cart"></i>
+                                                </span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="text-muted font-size-13 mb-0 float-end">3 min ago</p>
+                                                <h6 class="mb-1">Your order is placed</h6>
+                                                <div>
+                                                    <p class="mb-0">If several languages coalesce the grammar</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#!" class="text-reset notification-item">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0 avatar-sm me-3">
+                                                <span class="avatar-title bg-success rounded-circle font-size-18">
+                                                    <i class="bx bx-badge-check"></i>
+                                                </span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="text-muted font-size-13 mb-0 float-end">8 min ago</p>
+                                                <h6 class="mb-1">Your item is shipped</h6>
+                                                <div>
+                                                    <p class="mb-0">If several languages coalesce the grammar</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#!" class="text-reset notification-item">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0 me-3">
+                                                <img src="{% static 'assets/images/users/avatar-6.jpg' %}" class="rounded-circle avatar-sm" alt="user-pic">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="text-muted font-size-13 mb-0 float-end">1 hour ago</p>
+                                                <h6 class="mb-1">Salena Layfield</h6>
+                                                <div>
+                                                    <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-2 border-top d-grid">
+                                    <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
+                                        <i class="uil-arrow-circle-right me-1"></i> <span>Lihat Lebih Lanjut...</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="dropdown d-inline-block">
+                            <!-- ============================================================== -->
+                            {% include "top-menu.html" %}
+                            <!-- ============================================================== -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="vertical-menu">
+
+                <!-- LOGO -->
+                <div class="navbar-brand-box">
+                    <a href="javascript:void(0);" class="logo logo-dark">
+                        <span class="logo-lg">
+                            <img src="{% static 'assets/images/logo-dark.png' %}" alt="" height="35">
+                        </span>
+                        <span class="logo-sm">
+                            <img src="{% static 'assets/images/logo-dark-sm.png' %}" alt="" height="28">
+                        </span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="logo logo-light">
+                        <span class="logo-lg">
+                            <img src="{% static 'assets/images/logo-light.png' %}" alt="" height="35">
+                        </span>
+                        <span class="logo-sm">
+                            <img src="{% static 'assets/images/logo-light-sm.png' %}" alt="" height="28">
+                        </span>
+                    </a>
+                </div>
+
+                <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">
+                    <i class="bx bx-menu align-middle"></i>
+                </button>
+
+                <div data-simplebar class="sidebar-menu-scroll">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                        <!-- ============================================================== -->
+                        {% include "ekinerja-menu.html" %}
+                        <!-- ============================================================== -->
+                    </div>
+                    <!-- Sidebar -->
+                </div>
+            </div>
+            <!-- Left Sidebar End -->
+            <header class="ishorizontal-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- ============================================================== -->
+                        <!-- d-flex header -->
+                        <!-- ============================================================== -->
+                    </div>
+
+                    <div class="d-flex">
+                        <!-- ============================================================== -->
+                        <!-- d-flex nav -->
+                        <!-- ============================================================== -->
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- Start top nav -->
+                <!-- ============================================================== -->
+                <div class="topnav">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+                            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                                <ul class="navbar-nav">
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End top nav -->
+                <!-- ============================================================== -->
+            </header>
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+                <div class="page-content">
+                    <!-- ============================================================== -->
+                    {% block isi %}
+
+                    {% endblock %}
+                    <!-- ============================================================== -->
+                </div>
+                <!-- End Page-content -->
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script>document.write(new Date().getFullYear())</script> © spasikita.kemdikbud.go.id
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                    Biro Perencanaan, Sekretariat Jenderal - Kemendikbudritek
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- ============================================================== -->
+        <!-- right sidebar -->
+        <!-- ============================================================== -->
+
+        <!-- JAVASCRIPT -->
+        <script src="{% static 'assets/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'assets/libs/metismenujs/metismenujs.min.js' %}"></script>
+        <script src="{% static 'assets/libs/simplebar/simplebar.min.js' %}"></script>
+        <script src="{% static 'assets/libs/eva-icons/eva.min.js' %}"></script>
+
+        <!-- Vector map-->
+        <script src="{% static 'assets/libs/jsvectormap/js/jsvectormap.min.js' %}"></script>
+        <script src="{% static 'assets/libs/jsvectormap/maps/world-merc.js' %}"></script>
+        
+        <script src="{% static 'assets/js/pages/dashboard.init.js' %}"></script>
+        <script src="{% static 'assets/js/pages/form-advanced.init.js' %}"></script>
+
+        <script src="{% static 'assets/js/app.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.js' %}"></script>
+        <script src="{% static 'assets/js/select2.js' %}"></script>
+        <script src="{% static 'assets/js/forms-selects.js' %}"></script>
+
+        <!-- Froala -->
+        <script type="text/javascript" src="{% static 'froala/js/codemirror.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/xml.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/froala_editor.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/align.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/code_beautifier.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/code_view.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/colors.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/draggable.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/emoticons.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/font_size.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/font_family.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/image.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/image_manager.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/line_breaker.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/link.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/lists.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/paragraph_format.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/paragraph_style.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/table.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/video.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/url.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/entities.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/char_counter.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/inline_style.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'froala/js/plugins/save.min.js' %}"></script>
+
+        <script>
+            (function () {
+                new FroalaEditor("#fe_kertaskerja", {
+                    fullPage: true,
+                    key: "OXC1lD4D3B14B10B8D7C5dNSWXa1c1MDe1CI1PLPFa1F1EESFKVlA6F6D5H5A1D3B10A3B5A5=="
+                })
+                new FroalaEditor('#fe_tekskolom, #fe_tekskolom1, #fe_tekskolom2, #fe_tekskolom3, #fe_tekskolom4, #fe_tekskolom5, #fe_tekskolom6, #fe_tekskolom7, #fe_tekskolom8, #fe_tekskolom9, #fe_tekskolom10, #fe_tekskolom11, #fe_tekskolom12, #fe_tekskolom13, #fe_tekskolom14, #fe_tekskolom15, #fe_tekskolom16, #fe_tekskolom17, #fe_tekskolom18, #fe_tekskolom19, #fe_tekskolom20, #fe_tekskolom21, #fe_tekskolom22, #fe_tekskolom23, #fe_tekskolom24, #fe_tekskolom25, #fe_tekskolom26, #fe_tekskolom27, #fe_tekskolom28, #fe_tekskolom29, #fe_tekskolom30, #fe_tekskolom31, #fe_tekskolom32, #fe_tekskolom33, #fe_tekskolom34, #fe_tekskolom35, #fe_tekskolom36, #fe_tekskolom37, #fe_tekskolom38, #fe_tekskolom39, #fe_tekskolom40, #fe_tekskolom41, #fe_tekskolom42, #fe_tekskolom43, #fe_tekskolom44, #fe_tekskolom45, #fe_tekskolom46, #fe_tekskolom47, #fe_tekskolom48, #fe_tekskolom49, #fe_tekskolom50, #fe_tekskolom51, #fe_tekskolom52, #fe_tekskolom53, #fe_tekskolom54, #fe_tekskolom55, #fe_tekskolom56, #fe_tekskolom57, #fe_tekskolom58, #fe_tekskolom59, #fe_tekskolom60, #fe_tekskolom61, #fe_tekskolom62, #fe_tekskolom63, #fe_tekskolom64, #fe_tekskolom65, #fe_tekskolom66, #fe_tekskolom67, #fe_tekskolom68, #fe_tekskolom69, #fe_tekskolom70, #fe_tekskolom71, #fe_tekskolom72, #fe_tekskolom73, #fe_tekskolom74, #fe_tekskolom75, #fe_tekskolom76, #fe_tekskolom77, #fe_tekskolom78, #fe_tekskolom79, #fe_tekskolom80, #fe_tekskolom81, #fe_tekskolom82, #fe_tekskolom83, #fe_tekskolom84, #fe_tekskolom85, #fe_tekskolom86, #fe_tekskolom87, #fe_tekskolom88, #fe_tekskolom89, #fe_tekskolom90, #fe_tekskolom91, #fe_tekskolom92, #fe_tekskolom93, #fe_tekskolom94, #fe_tekskolom95, #fe_tekskolom96, #fe_tekskolom97, #fe_tekskolom98, #fe_tekskolom99, #fe_tekskolom100', 
+                {
+                    key: "OXC1lD4D3B14B10B8D7C5dNSWXa1c1MDe1CI1PLPFa1F1EESFKVlA6F6D5H5A1D3B10A3B5A5==",
+                    toolbarButtons: [['']]
+                })
+                new FroalaEditor('#fe_tekskolom_tlbr, #fe_tekskolom_tlbr1, #fe_tekskolom_tlbr2, #fe_tekskolom_tlbr3, #fe_tekskolom_tlbr4, #fe_tekskolom_tlbr5, #fe_tekskolom_tlbr6, #fe_tekskolom_tlbr7, #fe_tekskolom_tlbr8, #fe_tekskolom_tlbr9, #fe_tekskolom_tlbr10, #fe_tekskolom_tlbr11, #fe_tekskolom_tlbr12, #fe_tekskolom_tlbr13, #fe_tekskolom_tlbr14, #fe_tekskolom_tlbr15, #fe_tekskolom_tlbr16, #fe_tekskolom_tlbr17, #fe_tekskolom_tlbr18, #fe_tekskolom_tlbr19, #fe_tekskolom_tlbr20, #fe_tekskolom_tlbr21, #fe_tekskolom_tlbr22, #fe_tekskolom_tlbr23, #fe_tekskolom_tlbr24, #fe_tekskolom_tlbr25, #fe_tekskolom_tlbr26, #fe_tekskolom_tlbr27, #fe_tekskolom_tlbr28, #fe_tekskolom_tlbr29, #fe_tekskolom_tlbr30, #fe_tekskolom_tlbr31, #fe_tekskolom_tlbr32, #fe_tekskolom_tlbr33, #fe_tekskolom_tlbr34, #fe_tekskolom_tlbr35, #fe_tekskolom_tlbr36, #fe_tekskolom_tlbr37, #fe_tekskolom_tlbr38, #fe_tekskolom_tlbr39, #fe_tekskolom_tlbr40, #fe_tekskolom_tlbr41, #fe_tekskolom_tlbr42, #fe_tekskolom_tlbr43, #fe_tekskolom_tlbr44, #fe_tekskolom_tlbr45, #fe_tekskolom_tlbr46, #fe_tekskolom_tlbr47, #fe_tekskolom_tlbr48, #fe_tekskolom_tlbr49, #fe_tekskolom_tlbr50', 
+                {
+                    key: "OXC1lD4D3B14B10B8D7C5dNSWXa1c1MDe1CI1PLPFa1F1EESFKVlA6F6D5H5A1D3B10A3B5A5==",
+                    toolbarButtons: [['bold', 'italic', 'underline', 'alignLeft', 'alignCenter', 'alignRight', 'alignJustify', 'formatOLSimple', 'undo', 'redo']]
+                })
+            })()
+        </script>
+        <!-- Froala -->
+
+    </body>
+
+</html>
+{% endwith %}

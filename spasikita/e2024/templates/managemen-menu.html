@@ -1,0 +1,227 @@
+{% with request.resolver_match.url_name as url_name %}
+<!-- Left Menu Start -->
+<ul class="metismenu list-unstyled" id="side-menu">
+    <li class="menu-title" data-key="t-t_simproka">Simproka</li>
+    
+    <li>
+        <a href="{{ initurl }}/simproka/" class="text-primary">
+            <i class="bx bxs-book icon nav-icon"></i>
+            <span class="menu-item" data-key="t-simproka">Simproka</span>
+        </a>
+    </li>
+
+    <div class="dropdown-divider"></div>
+    <li class="menu-title" data-key="t-t_ekinerja">e-Kinerja</li>
+    
+    <li>
+        <a href="{{ initurl }}/ekinerja/" class="text-primary">
+            <i class="bx bx-book-bookmark icon nav-icon"></i>
+            <span class="menu-item" data-key="t-ekinerja">e-Kinerja</span>
+        </a>
+    </li>
+
+    <div class="dropdown-divider"></div>
+    <li class="menu-title" data-key="t-t_manajemen">Manajemen</li>
+
+    <li>
+        <a href="{{ initurl }}/managemen/">
+            <i class="bx bx-card icon nav-icon"></i>
+            <span class="menu-item" data-key="t-beranda">Beranda</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bxs-wallet nav-icon"></i>
+            <span class="menu-item" data-key="t-diparkakl">DIPA/RKAKL</span>
+            <!-- <span class="badge rounded-pill bg-primary">2</span> -->
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-upload">Upload</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-uploaddiparkakl">DIPA/RKAKL</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-uploadreferensioutput">Referensi Output</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-uploadreferensisuboutput">Referensi Suboutput</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-uploadreferensikomponen">Referensi Komponen</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-uploadreferensisubkomponen">Referensi Subkomponen</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" data-key="t-viewdiparkakl">Info DIPA/RKAKL</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-list-ol nav-icon"></i>
+            <span class="menu-item" data-key="t-referensi">Referensi</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-referensisatuanrkakl">Satuan DIPA/RKAKL</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bxs-dashboard nav-icon"></i>
+            <span class="menu-item" data-key="t-simproka">Simproka</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-simprokaaksesinput">Akses Input</a></li>
+            <li><a href="javascript:void(0);" data-key="t-simprokaaksesedit">Akses Edit</a></li>
+            <li><a href="javascript:void(0);" data-key="t-simprokainputtarget">Input Target</a></li>
+            <li><a href="javascript:void(0);" data-key="t-simprokarekonrokomponen">Rekon Komponen</a></li>
+            <li><a href="javascript:void(0);" data-key="t-simprokarekonrosatker">Rekon RO Satker</a></li>
+            <li><a href="javascript:void(0);" data-key="t-simprokarekonrorenja">Rekon RO Renja</a></li>
+            <li><a href="javascript:void(0);" data-key="t-simprokarekonrosmart">Rekon RO Smart</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bxs-food-menu nav-icon"></i>
+            <span class="menu-item" data-key="t-esrmenpan">ESR Menpan</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-esrmenpanreferensi">Referensi User</a></li>
+            <li><a href="javascript:void(0);" data-key="t-esrmenpanuploaddokumen">Upload Dokumen</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bxs-bookmarks nav-icon"></i>
+            <span class="menu-item" data-key="t-renstra">Renstra</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-renstrassikss">SS dan IKSS</a></li>
+            <li><a href="javascript:void(0);" data-key="t-renstraspikp">SP dan IKP</a></li>
+            <li><a href="javascript:void(0);" data-key="t-renstraskikk">SK dan IKK</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-calendar-event nav-icon"></i>
+            <span class="menu-item" data-key="t-rencanakinerjatahunan">Rencana Kinerja</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-aksesmenu">Akses RKT</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-rencanakinerjatahunanaksessatker">RKT Satker</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-rencanakinerjatahunanaksesunitutama">RKT Unit Utama</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-edit icon nav-icon"></i>
+            <span class="menu-item" data-key="t-perjanjiankinerja">Perjanjian Kinerja</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-aksespk">Akses PK</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-aksespksatker">PK Satker</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-aksespkunitutama">PK Unit Utama</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-aksesmenu">Akses Menu</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-aksesmenusatker">Menu Satker</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-aksesmenuunitutama">Menu Unit Utama</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-bar-chart-alt nav-icon"></i>
+            <span class="menu-item" data-key="t-pengukurankinerja">Pengukuran Kinerja</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-aksespengukuran">Akses Pengukuran</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-aksespengukuransatker">Pengukuran Satker</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-aksespengukuranunitutama">Pengukuran Unit Utama</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-aksespengukurankl">Pengukuran KL</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-menupengukuran">Akses Menu</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-menupengukuransatker">Menu Satker</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-menupengukuranunitutama">Menu Unit Utama</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-menupengukurankl">Menu KL</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-select-multiple nav-icon"></i>
+            <span class="menu-item" data-key="t-evaluasi">Evaluasi</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-akseslke">Akses LKE</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-akseslkesatker">LKE Satker</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-akseslkeunitutama">LKE Unit Utama</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-akseslkekl">LKE KL</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-akseslhe">Akses LHE</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-akseslhesatker">LHE Satker</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-akseslheunitutama">LHE Unit Utama</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-akseslhekl">LHE KL</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-file nav-icon"></i>
+            <span class="menu-item" data-key="t-laporankinerja">Laporan Kinerja</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-akseslakin">Akses Lakin</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-akseslakinsatker">Lakin Satker</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-akseslakinunitutama">Lakin Unit Utama</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-akseslakinkl">Lakin KL</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-time-five nav-icon"></i>
+            <span class="menu-item" data-key="t-riwayat">Riwayat</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-riwayatbsre">BSRE</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bxs-cog nav-icon"></i>
+            <span class="menu-item" data-key="t-pengaturan">Pengaturan</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="{{ initurl }}/managemen/pengguna/" data-key="t-pengaturanpengguna">Pengguna</a></li>
+            <li><a href="{{ initurl }}/managemen/hakakses/" data-key="t-pengaturanhakakses">Hak Akses</a></li>
+            <!--
+            <li><a href="{{ initurl }}/managemen/unitutama/" data-key="t-pengaturanunitutama">Unit Utama</a></li>
+            <li><a href="{{ initurl }}/managemen/satuankerja/" data-key="t-pengaturansatuankerja">Satuan Kerja</a></li>
+            <li><a href="{{ initurl }}/managemen/dekonsentrasi/" data-key="t-pengaturandekonsentrasi">Dekonsentrasi</a></li>
+            -->
+        </ul>
+    </li>
+    
+</ul>
+{% endwith %}

@@ -1,0 +1,78 @@
+{% with request.resolver_match.url_name as url_name %}
+<!-- Left Menu Start -->
+<ul class="metismenu list-unstyled" id="side-menu">
+    <li class="menu-title" data-key="t-t_ekinerja">e-Kinerja</li>
+    
+    <li>
+        <a href="{{ initurl }}/ekinerja/" class="text-primary">
+            <i class="bx bx-book-bookmark icon nav-icon"></i>
+            <span class="menu-item" data-key="t-ekinerja">e-Kinerja</span>
+        </a>
+    </li>
+
+    <div class="dropdown-divider"></div>
+    <li class="menu-title" data-key="t-t_managemen">Managemen</li>
+
+    <li>
+        <a href="{{ initurl }}/managemen/" class="text-danger">
+            <i class="bx bx-customize icon nav-icon"></i>
+            <span class="menu-item" data-key="t-managemen">Managemen</span>
+        </a>
+    </li>
+
+    <div class="dropdown-divider"></div>
+    <li class="menu-title" data-key="t-t_simproka">Simproka</li>
+
+    <li>
+        <a href="{{ initurl }}/simproka/">
+            <i class="bx bx-card icon nav-icon"></i>
+            <span class="menu-item" data-key="t-beranda">Beranda</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-detail nav-icon"></i>
+            <span class="menu-item" data-key="t-laporanreguler">Laporan Reguler</span>
+            <!-- <span class="badge rounded-pill bg-primary">2</span> -->
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" data-key="t-laporanregulertarget">Target</a></li>
+            <li><a href="javascript:void(0);" data-key="t-laporanregulercapaian">Capaian</a></li>
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-laporanregulermonitoring">Monitoring</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-laporanregulermonitoringro">Capaian RO</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-laporanregulermonitoringanomali">Potensi Animali</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-spreadsheet nav-icon"></i>
+            <span class="menu-item" data-key="t-perjanjiankinerja">Laporan Non Reguler</span>
+        </a>
+        <ul class="sub-menu" aria-expanded="false">
+            <li><a href="javascript:void(0);" class="has-arrow" data-key="t-analisissmart">Analisis Smart</a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li><a href="javascript:void(0);" data-key="t-analisissmartkementerian">Kementerian</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-analisissmartunitutama">Unit Utama</a></li>
+                    <li><a href="javascript:void(0);" data-key="t-analisissmartsatker">Satker</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" data-key="t-smartikss">IKSS Smart</a></li>
+            <li><a href="javascript:void(0);" data-key="t-smartikp">IKP Smart</a></li>
+            <li><a href="javascript:void(0);" data-key="t-smartikk">IKK Smart</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="javascript:void(0);">
+            <i class="bx bx-chart nav-icon"></i>
+            <span class="menu-item" data-key="t-quickwin">Quick Wins</span>
+        </a>
+    </li>
+
+</ul>
+{% endwith %}
